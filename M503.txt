@@ -1,0 +1,41 @@
+echo:; Linear Units:
+echo:  G21 ; (mm)
+echo:; Temperature Units:
+echo:  M149 C ; Units in Celsius
+echo:; Filament settings (Disabled):
+echo:  M200 S0 D1.75
+echo:; Steps per unit:
+echo:  M92 X80.00 Y80.00 Z400.00 E445.00
+echo:; Max feedrates (units/s):
+echo:  M203 X300.00 Y300.00 Z50.00 E60.00
+echo:; Max Acceleration (units/s2):
+echo:  M201 X2000.00 Y2000.00 Z100.00 E10000.00
+echo:; Acceleration (units/s2) (P<print-accel> R<retract-accel> T<travel-accel>):
+echo:  M204 P800.00 R10000.00 T2000.00
+echo:; Advanced (B<min_segment_time_us> S<min_feedrate> T<min_travel_feedrate> J<junc_dev>):
+echo:  M205 B20000.00 S0.00 T0.00 J0.03
+echo:; Home offset:
+echo:  M206 X0.00 Y0.00 Z0.00
+echo:; Mesh Bed Leveling:
+echo:  M420 S0 Z0.00 ; Leveling OFF
+echo:  G29 S3 I0 J0 Z0.22500
+echo:  G29 S3 I1 J0 Z0.25000
+echo:  G29 S3 I2 J0 Z0.32500
+echo:  G29 S3 I0 J1 Z0.37500
+echo:  G29 S3 I1 J1 Z0.50000
+echo:  G29 S3 I2 J1 Z0.27500
+echo:  G29 S3 I0 J2 Z0.27500
+echo:  G29 S3 I1 J2 Z0.32500
+echo:  G29 S3 I2 J2 Z0.30000
+echo:  G29 S4 Z0.00000
+echo:; Material heatup parameters:
+echo:  M145 S0 H200.00 B70.00 F0
+echo:  M145 S1 H240.00 B80.00 F0
+echo:; Hotend PID:
+echo:  M301 P15.25 I0.97 D59.78
+echo:; Bed PID:
+echo:  M304 P92.75 I15.67 D366.04
+echo:; LCD Contrast:
+echo:  M250 C255
+echo:; Filament load/unload:
+echo:  M603 L570.00 U650.00 ; (mm)
